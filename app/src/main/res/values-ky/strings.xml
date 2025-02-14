@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string name="text1">Капгыч толтуруу</string>
+    <string name="text2">Пывваупка ерепр екр керк рк?</string>
+    <string name="text3">Фвмав иар репрер %s</string>
+    <string name="text4">Щвавпкпр пкап ререк 5 ре.</string>
+    <string name="text5">Пвмвап риепрр ерке\n вап кпкпд прпр</string>
+    <string name="text6">Менин текстым 6</string>
 </resources>
