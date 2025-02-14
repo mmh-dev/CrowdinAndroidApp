@@ -1,6 +1,7 @@
 package com.murod.crowdinandroidapp
 
 import android.app.Activity
+import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.compose.LocalActivity
@@ -29,6 +30,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.crowdin.platform.Crowdin
 import com.murod.crowdinandroidapp.ui.theme.MyApplicationTheme
 import java.util.Locale
 
@@ -43,7 +45,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun getDelegate() = BaseContextWrappingDelegate(super.getDelegate())
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(Crowdin.wrapContext(newBase))
+    }
 }
 
 @Preview
